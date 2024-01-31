@@ -1,0 +1,259 @@
+html {
+  background-color: #0e0e12;
+  color: #ccc;
+}
+.tekst {
+  text-align: center;
+}
+
+h1 {
+  font-size: 3rem;
+  text-align: center;
+}
+
+.refresh {
+  display: none;
+  background-color: #3c6ea7;
+  padding: 10px 94.5px;
+  margin-top: 9px;
+}
+
+section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+p {
+  font-size: 1.2rem;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 4rem;
+
+  background-color: #24262f;
+  width: 600px;
+  border-radius: 20px;
+  padding-bottom: 2rem;
+}
+
+@keyframes celebrate {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.celebrate {
+  color: rgb(200, 39, 14);
+  animation: celebrate 1.4s ease-in-out;
+}
+
+@keyframes celebrate {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.4);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.celebrate {
+  color: rgb(200, 188, 14);
+  animation: celebrate 1.1s ease-in-out;
+}
+
+input {
+  padding: 10px;
+  margin: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+button {
+  padding: 10px 107px;
+  cursor: pointer;
+  background-color: #306657;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+p {
+  margin-top: 20px;
+  font-weight: bold;
+  font-size: 1.7rem;
+}
+
+img {
+  max-width: 100%;
+  max-height: 300px;
+  display: none;
+  border-radius: 10px;
+}
+
+.celebratecontainer {
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.fireworks {
+  height: 100vh;
+  width: 60vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.fireworks .firework {
+  position: relative;
+  top: 0px;
+  left: 0px;
+  margin: 0px 50px;
+}
+.fireworks .firework:before {
+  content: "";
+  display: block;
+  border-radius: 5px;
+  background-color: #daa520;
+  width: 5px;
+  height: 0px;
+  will-change: transform;
+  transform: translateY(100px);
+  animation: fireworkstart 3s ease-out;
+}
+.fireworks .firework .explosion {
+  position: absolute;
+  top: 0;
+  width: 5px;
+  height: 100px;
+  opacity: 0;
+  transform-origin: top center;
+  will-change: transform;
+  animation: explosion 0.7s linear 3s;
+}
+.fireworks .firework .explosion:nth-child(1) {
+  transform: rotate(0deg);
+}
+.fireworks .firework .explosion:nth-child(2) {
+  transform: rotate(90deg);
+}
+.fireworks .firework .explosion:nth-child(3) {
+  transform: rotate(180deg);
+}
+.fireworks .firework .explosion:nth-child(4) {
+  transform: rotate(-90deg);
+}
+.fireworks .firework .explosion:nth-child(5) {
+  transform: rotate(45deg);
+}
+.fireworks .firework .explosion:nth-child(6) {
+  transform: rotate(-45deg);
+}
+.fireworks .firework .explosion:nth-child(7) {
+  transform: rotate(135deg);
+}
+.fireworks .firework .explosion:nth-child(8) {
+  transform: rotate(225deg);
+}
+
+.fireworks .firework .explosion .spark {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+  will-change: transform;
+  animation: explosion2 0.7s ease-in-out 3s;
+}
+
+.fireworks .firework .explosion .spark.silver {
+  background-color: #c0c0c0;
+}
+.fireworks .firework .explosion .spark.gold {
+  background-color: #daa520;
+}
+@keyframes fireworkstart {
+  0% {
+    height: 0px;
+    transform: translateY(1000px);
+  }
+  50% {
+    height: 50px;
+  }
+  75% {
+    height: 30px;
+  }
+  100% {
+    height: 0;
+    transform: translateY(0);
+  }
+}
+
+@keyframes explosion {
+  0% {
+    height: 0px;
+    opacity: 0;
+  }
+  50% {
+    height: 40px;
+    opacity: 1;
+  }
+  100% {
+    height: 0px;
+    opacity: 0;
+  }
+}
+@keyframes explosion2 {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(35px);
+  }
+  75% {
+    transform: translateY(100px);
+  }
+  100% {
+    transform: translateY(200px);
+  }
+}
+
+@keyframes shake {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-5px);
+  }
+  50% {
+    transform: translateX(5px);
+  }
+  75% {
+    transform: translateX(-5px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+/* Apply the shake animation to an element with a class */
+.shake-element {
+  animation: shake 0.5s ease-in-out;
+}
