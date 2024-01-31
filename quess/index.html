@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gætteleg</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="celebratecontainer" id="celebratecon">
+        <div class="fireworks">
+            <div class="firework">
+                <div class="explosion">
+                    <div class="spark gold"></div>
+                </div>
+                <div class="explosion">
+                    <div class="spark gold"></div>
+                </div>
+                <div class="explosion">
+                    <div class="spark gold"></div>
+                </div>
+                <div class="explosion">
+                    <div class="spark gold"></div>
+                </div>
+                <div class="explosion">
+                    <div class="spark gold"></div>
+                </div>
+                <div class="explosion">
+                    <div class="spark gold"></div>
+                </div>
+                <div class="explosion">
+                    <div class="spark gold"></div>
+                </div>
+                <div class="explosion">
+                    <div class="spark gold"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="fireworks">
+            <div class="firework">
+                <div class="explosion">
+                    <div class="spark gold"></div>
+                </div>
+                <div class="explosion">
+                    <div class="spark gold"></div>
+                </div>
+                <div class="explosion">
+                    <div class="spark gold"></div>
+                </div>
+                <div class="explosion">
+                    <div class="spark gold"></div>
+                </div>
+                <div class="explosion">
+                    <div class="spark gold"></div>
+                </div>
+                <div class="explosion">
+                    <div class="spark gold"></div>
+                </div>
+                <div class="explosion">
+                    <div class="spark gold"></div>
+                </div>
+                <div class="explosion">
+                    <div class="spark gold"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section>
+        <div class="container" id="alarm">
+            <div class="tekst">
+                <h1>Gæt et tal mellem 0 og 100</h1>
+
+            </div>
+            <input id="guessInput" placeholder="Skriv dit gæt">
+
+            <div class="knapper">
+                <button onclick="checkGuess()">Gæt</button>
+                <button class="refresh" id="refresh" onclick="refresh()">Refresh</button>
+            </div>
+            <p id="feedback"></p>
+            <img id="celebrationImage" src="goodjob.jpg" alt="Celebration Image">
+
+        </div>
+    </section>
+
+
+
+</body>
+<script src="script.js"> </script>
+
+
+</html>
